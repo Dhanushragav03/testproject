@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="base_link" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot name="base_link_" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
@@ -14,31 +14,31 @@
   <gravity>true</gravity>
 </gazebo>
 
-<gazebo reference="right wheel">
+<gazebo reference="right_whell_1">
   <material>${body_color}</material>
   <mu1>3500</mu1>
   <mu2>3500</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="left wheel">
+<gazebo reference="left_whell_1">
   <material>${body_color}</material>
   <mu1>3500</mu1>
   <mu2>3500</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="lidar">
+<gazebo reference="lidar_1">
   <material>${body_color}</material>
-  <mu1>3500</mu1>
-  <mu2>3500</mu2>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="mount">
+<gazebo reference="_mount_1">
   <material>${body_color}</material>
-  <mu1>3500</mu1>
-  <mu2>3500</mu2>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 <gazebo>
@@ -48,10 +48,10 @@
     <updateRate>${1000}</updateRate>
 
     <!-- Name of left joint, defaults to `left_joint` -->
-    <leftJoint>base_link_left_wheel_joint</leftJoint>
+    <leftJoint>Rev1</leftJoint>
 
     <!-- Name of right joint, defaults to `right_joint` -->
-    <rightJoint>base_link_right_wheel_joint</rightJoint>
+    <rightJoint>Rev2</rightJoint>
 
     <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
     <wheelSeparation>0.5380</wheelSeparation>
@@ -93,5 +93,6 @@
     <legacyMode>false</legacyMode>
   </plugin>
 </gazebo>
+
 
 </robot>
